@@ -16,6 +16,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         serif: ['Merriweather', 'Georgia', 'serif'],
+        'custom-bold': ['CustomBold', 'sans-serif'],
+        'custom-medium': ['CustomMedium', 'sans-serif'],
+        'custom-air': ['CustomAir', 'sans-serif'],
       },
       maxWidth: {
         'content': 'var(--content-width)',

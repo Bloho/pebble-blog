@@ -13,6 +13,7 @@ export interface Article {
   date: string;
   readTime: string;
   tags: string[];
+  fontFamily?: 'sans' | 'serif' | 'custom-bold' | 'custom-medium' | 'custom-air';
 }
 
 export const articles: Article[] = [

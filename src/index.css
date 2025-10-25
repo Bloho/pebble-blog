@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Fonts */
+@font-face {
+  font-family: 'CustomBold';
+  src: url('/src/assets/fonts/bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomMedium';
+  src: url('/src/assets/fonts/medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomAir';
+  src: url('/src/assets/fonts/air.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CustomBold';
+  src: url('/src/assets/fonts/bold-italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CustomMedium';
+  src: url('/src/assets/fonts/medium-italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */

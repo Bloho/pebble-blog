@@ -94,7 +94,9 @@ export default function Article() {
         <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl mx-auto">
             <div 
-              className="article-content font-serif text-lg leading-relaxed prose prose-lg max-w-none"
+              className={`article-content text-lg leading-relaxed prose prose-lg max-w-none ${
+                article.fontFamily ? `font-${article.fontFamily}` : 'font-serif'
+              }`}
               dangerouslySetInnerHTML={{ __html: article.content.trim().split('\n').map(line => {
                 if (line.startsWith('## ')) {
                   return `<h2>${line.slice(3)}</h2>`;
