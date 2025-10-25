@@ -1,7 +1,7 @@
-import article1Thumb from "@/assets/thumbnails/article-1.jpg";
-import article2Thumb from "@/assets/thumbnails/article-2.jpg";
-import article3Thumb from "@/assets/thumbnails/article-3.jpg";
-import article4Thumb from "@/assets/thumbnails/article-4.jpg";
+import article1Thumb from "@/assets/thumbnails/article-1.png";
+import article2Thumb from "@/assets/thumbnails/article-2.png";
+import article3Thumb from "@/assets/thumbnails/article-3.png";
+import article4Thumb from "@/assets/thumbnails/article-4.png";
 
 export interface Article {
   id: string;

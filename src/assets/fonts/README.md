@@ -18,7 +18,7 @@ In `src/data/articles.ts`, add the `fontFamily` property to any article:
   id: "example-article",
   title: "Example Article",
   // ... other properties
-  fontFamily: 'custom-bold' // or 'custom-medium', 'custom-air', 'sans', 'serif'
+  fontFamily: 'bold' // or 'custom-medium', 'custom-air', 'sans', 'serif'
 }
 ```
 
