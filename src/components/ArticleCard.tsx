@@ -9,7 +9,7 @@ interface ArticleCardProps {
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <Link to={`/article/${article.id}`} className="block">
-      <Card className="h-full overflow-hidden">
+      <Card className="h-full overflow-hidden border-0 rounded-none shadow-none">
         <div className="aspect-video overflow-hidden bg-muted">
           <img
             src={article.thumbnail}
@@ -17,7 +17,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
             className="h-full w-full object-cover"
           />
         </div>
-        <CardHeader className="space-y-2">
+        <CardHeader className="space-y-2 p-6">
           <p className="text-sm text-muted-foreground">
             {new Date(article.date).toLocaleDateString('en-US', { 
               month: 'short', 

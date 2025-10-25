@@ -1,9 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, ArrowLeft } from "lucide-react";
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
@@ -36,39 +35,26 @@ export default function Article() {
         {/* Hero Section */}
         <div className="w-full bg-muted">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <Button variant="ghost" asChild className="mb-6">
+            <Button variant="ghost" asChild>
               <Link to="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Articles
               </Link>
             </Button>
             
-            <div className="max-w-4xl">
-              <div className="flex flex-wrap gap-2 mb-4">
-                {article.tags.map((tag) => (
-                  <Badge key={tag} variant="secondary">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-              
+            <div className="max-w-4xl mt-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 {article.title}
               </h1>
               
-              <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-muted-foreground mb-8">
-                <span className="font-medium text-foreground">{article.author}</span>
-                <span className="flex items-center gap-1">
-                  <Calendar className="h-4 w-4" />
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+                <Calendar className="h-4 w-4" />
+                <span>
                   {new Date(article.date).toLocaleDateString('en-US', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric'
                   })}
-                </span>
-                <span className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  {article.readTime}
                 </span>
               </div>
             </div>
