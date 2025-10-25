@@ -117,19 +117,46 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'CustomMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-feature-settings: 'kern' 1, 'liga' 1;
   }
 
+  p {
+    font-family: 'CustomMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-family: 'CustomBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply font-bold tracking-tight;
   }
 }
 
 @layer utilities {
   .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: var(--grid-gap);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border-left: 1px solid hsl(var(--border));
+    border-right: 1px solid hsl(var(--border));
+  }
+
+  .content-grid > * {
+    border-right: 1px solid hsl(var(--border));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .content-grid > *:nth-child(2n) {
+    border-right: none;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .content-grid > * {
+      border-right: none;
+    }
   }
 
   .article-content h2 {
