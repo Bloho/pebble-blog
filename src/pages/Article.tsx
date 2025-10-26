@@ -31,23 +31,23 @@ export default function Article() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 border-l border-r border-border max-w-7xl mx-auto w-full">
         {/* Hero Section */}
-        <div className="w-full bg-muted">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <Button variant="ghost" asChild>
+        <div className="w-full bg-muted border-b border-border">
+          <div className="px-8 sm:px-12 lg:px-16 py-12">
+            <Button variant="ghost" asChild className="mb-8">
               <Link to="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Articles
               </Link>
             </Button>
             
-            <div className="max-w-4xl mt-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <div className="max-w-4xl">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                 {article.title}
               </h1>
               
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Calendar className="h-4 w-4" />
                 <span>
                   {new Date(article.date).toLocaleDateString('en-US', {
@@ -62,10 +62,10 @@ export default function Article() {
         </div>
 
         {/* Featured Image */}
-        <div className="w-full">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-16">
-            <div className="max-w-4xl">
-              <div className="aspect-video overflow-hidden rounded-xl shadow-2xl">
+        <div className="w-full border-b border-border">
+          <div className="px-8 sm:px-12 lg:px-16 py-12">
+            <div className="max-w-4xl mx-auto">
+              <div className="aspect-video overflow-hidden">
                 <img
                   src={article.thumbnail}
                   alt={article.title}
@@ -77,14 +77,14 @@ export default function Article() {
         </div>
 
         {/* Article Content */}
-        <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="max-w-3xl mx-auto">
-            <div className="article-content text-lg leading-relaxed space-y-6">
+        <article className="px-8 sm:px-12 lg:px-16 py-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="article-content text-lg leading-relaxed space-y-8">
               {article.content.map((block, index) => {
                 switch (block.type) {
                   case 'paragraph':
                     return (
-                      <p key={index} className="text-foreground">
+                      <p key={index} className="text-foreground leading-relaxed">
                         {block.content}
                       </p>
                     );
@@ -94,7 +94,7 @@ export default function Article() {
                     return (
                       <HeadingTag 
                         key={index}
-                        className={block.level === 2 ? 'text-3xl font-bold mt-12 mb-4' : 'text-2xl font-bold mt-8 mb-3'}
+                        className={block.level === 2 ? 'text-3xl font-bold mt-16 mb-6' : 'text-2xl font-bold mt-12 mb-4'}
                       >
                         {block.content}
                       </HeadingTag>
@@ -102,8 +102,8 @@ export default function Article() {
                   
                   case 'image':
                     return (
-                      <figure key={index} className="my-12">
-                        <div className="aspect-video overflow-hidden rounded-lg">
+                      <figure key={index} className="my-16">
+                        <div className="aspect-video overflow-hidden">
                           <img
                             src={block.src}
                             alt={block.alt}
@@ -111,7 +111,7 @@ export default function Article() {
                           />
                         </div>
                         {block.caption && (
-                          <figcaption className="text-sm text-muted-foreground mt-3 text-center italic">
+                          <figcaption className="text-sm text-muted-foreground mt-4 text-center italic">
                             {block.caption}
                           </figcaption>
                         )}
@@ -120,7 +120,7 @@ export default function Article() {
                   
                   case 'quote':
                     return (
-                      <blockquote key={index} className="border-l-4 border-primary pl-6 py-2 my-8 italic text-muted-foreground">
+                      <blockquote key={index} className="border-l-4 border-primary pl-6 py-4 my-12 italic text-muted-foreground">
                         {block.content}
                       </blockquote>
                     );
@@ -130,10 +130,10 @@ export default function Article() {
                     return (
                       <ListTag 
                         key={index}
-                        className={`space-y-2 ${block.ordered ? 'list-decimal' : 'list-disc'} list-inside ml-4`}
+                        className={`space-y-3 ${block.ordered ? 'list-decimal' : 'list-disc'} list-inside ml-4`}
                       >
                         {block.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="text-foreground">
+                          <li key={itemIndex} className="text-foreground leading-relaxed">
                             {item}
                           </li>
                         ))}
