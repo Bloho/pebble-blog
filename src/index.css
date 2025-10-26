@@ -113,6 +113,38 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :root {
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Blue glow effect during theme transition */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body.theme-transitioning::before {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 1;
   }
 
   body {

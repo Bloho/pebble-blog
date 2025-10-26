@@ -79,30 +79,72 @@ export default function Article() {
         {/* Article Content */}
         <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-3xl mx-auto">
-            <div 
-              className={`article-content text-lg leading-relaxed prose prose-lg max-w-none ${
-                article.fontFamily ? `font-${article.fontFamily}` : 'font-serif'
-              }`}
-              dangerouslySetInnerHTML={{ __html: article.content.trim().split('\n').map(line => {
-                if (line.startsWith('## ')) {
-                  return `<h2>${line.slice(3)}</h2>`;
-                } else if (line.startsWith('### ')) {
-                  return `<h3>${line.slice(4)}</h3>`;
-                } else if (line.startsWith('> ')) {
-                  return `<blockquote>${line.slice(2)}</blockquote>`;
-                } else if (line.startsWith('- ') || line.startsWith('* ')) {
-                  return `<li>${line.slice(2)}</li>`;
-                } else if (/^\d+\./.test(line)) {
-                  return `<li>${line.replace(/^\d+\.\s*/, '')}</li>`;
-                } else if (line.trim() === '') {
-                  return '<br/>';
-                } else if (line.startsWith('**') && line.endsWith('**')) {
-                  return `<p><strong>${line.slice(2, -2)}</strong></p>`;
-                } else {
-                  return `<p>${line}</p>`;
+            <div className="article-content text-lg leading-relaxed space-y-6">
+              {article.content.map((block, index) => {
+                switch (block.type) {
+                  case 'paragraph':
+                    return (
+                      <p key={index} className="text-foreground">
+                        {block.content}
+                      </p>
+                    );
+                  
+                  case 'heading':
+                    const HeadingTag = `h${block.level}` as keyof JSX.IntrinsicElements;
+                    return (
+                      <HeadingTag 
+                        key={index}
+                        className={block.level === 2 ? 'text-3xl font-bold mt-12 mb-4' : 'text-2xl font-bold mt-8 mb-3'}
+                      >
+                        {block.content}
+                      </HeadingTag>
+                    );
+                  
+                  case 'image':
+                    return (
+                      <figure key={index} className="my-12">
+                        <div className="aspect-video overflow-hidden rounded-lg">
+                          <img
+                            src={block.src}
+                            alt={block.alt}
+                            className="h-full w-full object-cover"
+                          />
+                        </div>
+                        {block.caption && (
+                          <figcaption className="text-sm text-muted-foreground mt-3 text-center italic">
+                            {block.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  
+                  case 'quote':
+                    return (
+                      <blockquote key={index} className="border-l-4 border-primary pl-6 py-2 my-8 italic text-muted-foreground">
+                        {block.content}
+                      </blockquote>
+                    );
+                  
+                  case 'list':
+                    const ListTag = block.ordered ? 'ol' : 'ul';
+                    return (
+                      <ListTag 
+                        key={index}
+                        className={`space-y-2 ${block.ordered ? 'list-decimal' : 'list-disc'} list-inside ml-4`}
+                      >
+                        {block.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="text-foreground">
+                            {item}
+                          </li>
+                        ))}
+                      </ListTag>
+                    );
+                  
+                  default:
+                    return null;
                 }
-              }).join('') }}
-            />
+              })}
+            </div>
           </div>
         </article>
       </main>

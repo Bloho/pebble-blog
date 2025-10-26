@@ -5,11 +5,24 @@ import { Button } from "@/components/ui/button";
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
+  const handleThemeChange = () => {
+    // Add theme transition class
+    document.body.classList.add('theme-transitioning');
+    
+    // Change theme
+    setTheme(theme === "light" ? "dark" : "light");
+    
+    // Remove transition class after animation
+    setTimeout(() => {
+      document.body.classList.remove('theme-transitioning');
+    }, 600);
+  };
+
   return (
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      onClick={handleThemeChange}
       className="h-9 w-9"
     >
       <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
