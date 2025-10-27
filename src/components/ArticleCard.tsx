@@ -10,7 +10,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <Link to={`/article/${article.id}`} className="block">
       <Card className="h-full overflow-hidden border shadow-sm rounded-lg">
-        <div className="aspect-video overflow-hidden bg-muted">
+        <div className="aspect-video overflow-hidden bg-muted rounded-t-lg">
           <img
             src={article.thumbnail}
             alt={article.title}

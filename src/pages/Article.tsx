@@ -61,7 +61,7 @@ export default function Article() {
         <div className="w-full border-b border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-12">
             <div className="max-w-4xl mx-auto">
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-video overflow-hidden rounded-lg">
                 <img
                   src={article.thumbnail}
                   alt={article.title}
@@ -99,7 +99,7 @@ export default function Article() {
                   case 'image':
                     return (
                       <figure key={index} className="my-16">
-                        <div className="aspect-video overflow-hidden">
+                        <div className="aspect-video overflow-hidden rounded-lg">
                           <img
                             src={block.src}
                             alt={block.alt}
@@ -146,7 +146,7 @@ export default function Article() {
 
         {/* Footer */}
         <footer className="w-full border-t border-border">
-          <div className="px-8 sm:px-12 lg:px-16">
+          <div className="px-8 sm:px-12 lg:px-16 py-8">
             <div className="max-w-4xl mx-auto">
               <img 
                 src={theme === "dark" ? footerDark : footerLight}
