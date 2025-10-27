@@ -5,14 +5,14 @@
 /* Custom Fonts */
 @font-face {
   font-family: 'Title';
-  src: url('/src/assets/fonts/title.otf') format('opentype');
+  src: url('/src/assets/fonts/title.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Details';
-  src: url('/src/assets/fonts/details.otf') format('opentype');
+  src: url('/src/assets/fonts/sfpro-medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: 'NormalText';
-  src: url('/src/assets/fonts/normal-text-medium.otf') format('opentype');
+  src: url('/src/assets/fonts/medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
