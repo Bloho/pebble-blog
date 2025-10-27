@@ -1,0 +1,12 @@
+<svg width="1920" height="200" viewBox="0 0 1920 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path d="M0 80C320 20 640 40 960 80C1280 120 1600 100 1920 80V200H0V80Z" fill="url(#gradient-dark)" opacity="0.3"/>
+  <path d="M0 100C320 60 640 80 960 100C1280 120 1600 110 1920 100V200H0V100Z" fill="url(#gradient-dark)" opacity="0.5"/>
+  <path d="M0 130C320 90 640 110 960 130C1280 150 1600 140 1920 130V200H0V130Z" fill="url(#gradient-dark)" opacity="0.8"/>
+  <defs>
+    <linearGradient id="gradient-dark" x1="0" y1="0" x2="1920" y2="0">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#2d2d2d"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -146,11 +146,15 @@ export default function Article() {
 
         {/* Footer */}
         <footer className="w-full border-t border-border">
-          <img 
-            src={theme === "dark" ? footerDark : footerLight}
-            alt="Footer decoration" 
-            className="w-full h-auto object-cover"
-          />
+          <div className="px-8 sm:px-12 lg:px-16">
+            <div className="max-w-4xl mx-auto">
+              <img 
+                src={theme === "dark" ? footerDark : footerLight}
+                alt="Footer decoration" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </footer>
       </main>
     </div>

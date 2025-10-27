@@ -14,7 +14,7 @@ const Index = () => {
 
       {/* Articles Grid */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="content-grid">
+        <div className="content-grid gap-8">
           {articles.map((article) => (
             <ArticleCard key={article.id} article={article} />
           ))}
@@ -23,11 +23,13 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="w-full">
-        <img 
-          src={theme === "dark" ? footerDark : footerLight}
-          alt="Footer decoration" 
-          className="w-full h-auto object-cover"
-        />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <img 
+            src={theme === "dark" ? footerDark : footerLight}
+            alt="Footer decoration" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </footer>
     </div>
   );
