@@ -3,6 +3,7 @@ import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowLeft } from "lucide-react";
+import footerSvg from "@/assets/footer.svg";
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
@@ -32,6 +33,27 @@ export default function Article() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 border-l border-r border-border max-w-7xl mx-auto w-full">
+        {/* Title Section */}
+        <div className="w-full border-b border-border">
+          <div className="px-8 sm:px-12 lg:px-16 py-12">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+                {article.title}
+              </h1>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Calendar className="h-4 w-4" />
+                <span>
+                  {new Date(article.date).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Featured Image */}
         <div className="w-full border-b border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-12">
@@ -119,6 +141,15 @@ export default function Article() {
           </div>
         </article>
       </main>
+      
+      {/* Footer */}
+      <footer className="w-full">
+        <img 
+          src={footerSvg} 
+          alt="Footer decoration" 
+          className="w-full h-auto object-cover"
+        />
+      </footer>
     </div>
   );
 }
