@@ -75,12 +75,12 @@ export default function Article() {
         {/* Article Content */}
         <article className="px-8 sm:px-12 lg:px-16 py-16">
           <div className="max-w-4xl mx-auto">
-            <div className="article-content text-base leading-snug tracking-tight space-y-4">
+            <div className="article-content text-base leading-snug tracking-normal space-y-4">
               {article.content.map((block, index) => {
                 switch (block.type) {
                   case 'paragraph':
                     return (
-                      <p key={index} className="text-foreground leading-snug tracking-tight">
+                      <p key={index} className="text-foreground leading-snug tracking-normal">
                         {block.content}
                       </p>
                     );
