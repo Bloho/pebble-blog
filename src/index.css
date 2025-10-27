@@ -4,37 +4,58 @@
 
 /* Custom Fonts */
 @font-face {
-  font-family: 'CustomBold';
-  src: url('/src/assets/fonts/bold.otf') format('opentype');
+  font-family: 'Title';
+  src: url('/src/assets/fonts/title.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Details';
+  src: url('/src/assets/fonts/details.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CustomMedium';
-  src: url('/src/assets/fonts/medium.otf') format('opentype');
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CustomAir';
-  src: url('/src/assets/fonts/air.otf') format('opentype');
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'CustomBold';
-  src: url('/src/assets/fonts/bold-italic.otf') format('opentype');
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-italic-bold.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'CustomMedium';
-  src: url('/src/assets/fonts/medium-italic.otf') format('opentype');
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-italic-medium.otf') format('opentype');
   font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NormalText';
+  src: url('/src/assets/fonts/normal-text-italic-light.otf') format('opentype');
+  font-weight: 300;
   font-style: italic;
 }
 
@@ -149,16 +170,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'CustomMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'NormalText', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
     font-feature-settings: 'kern' 1, 'liga' 1;
   }
 
   p {
-    font-family: 'CustomMedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'NormalText', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'CustomBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Title', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     @apply font-bold tracking-tight;
   }
 }

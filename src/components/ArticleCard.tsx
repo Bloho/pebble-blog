@@ -18,14 +18,14 @@ export function ArticleCard({ article }: ArticleCardProps) {
           />
         </div>
         <CardHeader className="space-y-2 p-6">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground font-details">
             {new Date(article.date).toLocaleDateString('en-US', { 
               month: 'short', 
               day: 'numeric',
               year: 'numeric'
-            })}
+            })} • {article.author}
           </p>
-          <h3 className="text-xl font-semibold leading-tight">
+          <h3 className="text-xl font-semibold leading-tight font-title">
             {article.title}
           </h3>
         </CardHeader>

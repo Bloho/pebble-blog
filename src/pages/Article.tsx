@@ -40,17 +40,17 @@ export default function Article() {
         <div className="w-full border-b border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-12">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-title">
                 {article.title}
               </h1>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground font-details">
                 <Calendar className="h-4 w-4" />
                 <span>
                   {new Date(article.date).toLocaleDateString('en-US', {
                     month: 'long',
                     day: 'numeric',
                     year: 'numeric'
-                  })}
+                  })} • {article.author}
                 </span>
               </div>
             </div>
@@ -75,12 +75,12 @@ export default function Article() {
         {/* Article Content */}
         <article className="px-8 sm:px-12 lg:px-16 py-16">
           <div className="max-w-4xl mx-auto">
-            <div className="article-content text-base leading-snug tracking-normal space-y-4">
+            <div className="article-content text-base leading-snug tracking-normal space-y-4 font-normal-text font-medium">
               {article.content.map((block, index) => {
                 switch (block.type) {
                   case 'paragraph':
                     return (
-                      <p key={index} className="text-foreground leading-snug tracking-normal">
+                      <p key={index} className="text-foreground leading-snug tracking-normal font-normal-text font-medium">
                         {block.content}
                       </p>
                     );
@@ -90,7 +90,7 @@ export default function Article() {
                     return (
                       <HeadingTag 
                         key={index}
-                        className={block.level === 2 ? 'text-3xl font-bold mt-16 mb-6' : 'text-2xl font-bold mt-12 mb-4'}
+                        className={block.level === 2 ? 'text-3xl font-bold mt-16 mb-6 font-title' : 'text-2xl font-bold mt-12 mb-4 font-title'}
                       >
                         {block.content}
                       </HeadingTag>
@@ -126,10 +126,10 @@ export default function Article() {
                     return (
                       <ListTag 
                         key={index}
-                        className={`space-y-3 ${block.ordered ? 'list-decimal' : 'list-disc'} list-inside ml-4`}
+                        className={`space-y-3 ${block.ordered ? 'list-decimal' : 'list-disc'} list-inside ml-4 font-normal-text font-medium`}
                       >
                         {block.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="text-foreground leading-relaxed">
+                          <li key={itemIndex} className="text-foreground leading-relaxed font-normal-text font-medium">
                             {item}
                           </li>
                         ))}
