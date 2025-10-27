@@ -1,8 +1,13 @@
 import { Header } from "@/components/Header";
 import { ArticleCard } from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
+import { useTheme } from "next-themes";
+import footerDark from "@/assets/footer-dark.svg";
+import footerLight from "@/assets/footer-light.svg";
 
 const Index = () => {
+  const { theme } = useTheme();
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -15,6 +20,15 @@ const Index = () => {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="w-full">
+        <img 
+          src={theme === "dark" ? footerDark : footerLight}
+          alt="Footer decoration" 
+          className="w-full h-auto object-cover"
+        />
+      </footer>
     </div>
   );
 };

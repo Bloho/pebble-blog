@@ -3,11 +3,14 @@ import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowLeft } from "lucide-react";
-import footerSvg from "@/assets/footer.svg";
+import { useTheme } from "next-themes";
+import footerDark from "@/assets/footer-dark.svg";
+import footerLight from "@/assets/footer-light.svg";
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
   const article = id ? getArticleById(id) : undefined;
+  const { theme } = useTheme();
 
   if (!article) {
     return (
@@ -140,16 +143,16 @@ export default function Article() {
             </div>
           </div>
         </article>
+
+        {/* Footer */}
+        <footer className="w-full border-t border-border">
+          <img 
+            src={theme === "dark" ? footerDark : footerLight}
+            alt="Footer decoration" 
+            className="w-full h-auto object-cover"
+          />
+        </footer>
       </main>
-      
-      {/* Footer */}
-      <footer className="w-full">
-        <img 
-          src={footerSvg} 
-          alt="Footer decoration" 
-          className="w-full h-auto object-cover"
-        />
-      </footer>
     </div>
   );
 }
