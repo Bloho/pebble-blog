@@ -32,35 +32,6 @@ export default function Article() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 border-l border-r border-border max-w-7xl mx-auto w-full">
-        {/* Hero Section */}
-        <div className="w-full bg-muted border-b border-border">
-          <div className="px-8 sm:px-12 lg:px-16 py-12">
-            <Button variant="ghost" asChild className="mb-8">
-              <Link to="/">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Articles
-              </Link>
-            </Button>
-            
-            <div className="max-w-4xl">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-                {article.title}
-              </h1>
-              
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Calendar className="h-4 w-4" />
-                <span>
-                  {new Date(article.date).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric'
-                  })}
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Featured Image */}
         <div className="w-full border-b border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-12">
@@ -79,12 +50,12 @@ export default function Article() {
         {/* Article Content */}
         <article className="px-8 sm:px-12 lg:px-16 py-16">
           <div className="max-w-4xl mx-auto">
-            <div className="article-content text-lg leading-relaxed space-y-8">
+            <div className="article-content text-base leading-snug tracking-tight space-y-4">
               {article.content.map((block, index) => {
                 switch (block.type) {
                   case 'paragraph':
                     return (
-                      <p key={index} className="text-foreground leading-relaxed">
+                      <p key={index} className="text-foreground leading-snug tracking-tight">
                         {block.content}
                       </p>
                     );
