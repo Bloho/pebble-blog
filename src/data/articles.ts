@@ -1,4 +1,4 @@
-import article1Thumb from "@/assets/thumbnails/article-1.png";
+import article1Thumb from "@/assets/thumbnails/article-1.avif";
 import article2Thumb from "@/assets/thumbnails/article-2.png";
 import article3Thumb from "@/assets/thumbnails/article-3.png";
 import article4Thumb from "@/assets/thumbnails/article-4.png";
@@ -30,16 +30,16 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: "the-art-of-minimalism",
-    title: "The Art of Minimalism in Modern Design",
+    title: "Wow look at that whale! This is a sample text!",
     excerpt: "Exploring how less can truly be more in contemporary design practices and everyday life.",
     thumbnail: article1Thumb,
-    author: "Sarah Chen",
+    author: "Sabrina Lee",
     date: "2024-01-15",
     readTime: "5 min read",
     tags: ["Design", "Minimalism", "Lifestyle"],
     badges: [
       {
-        text: "Featured",
+        text: "12th",
         color: "bg-blue-500"
       },
       {
