@@ -2,7 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowLeft } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, ArrowLeft, Facebook, Instagram, Heart } from "lucide-react";
 import { useTheme } from "next-themes";
 import footerDark from "@/assets/footer-dark.svg";
 import footerLight from "@/assets/footer-light.svg";
@@ -43,15 +44,22 @@ export default function Article() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-title">
                 {article.title}
               </h1>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground font-details">
-                <Calendar className="h-4 w-4" />
-                <span>
-                  {new Date(article.date).toLocaleDateString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric'
-                  })} • {article.author}
-                </span>
+              <div className="flex items-center gap-3 flex-wrap">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground font-details">
+                  <Calendar className="h-4 w-4" />
+                  <span>
+                    {new Date(article.date).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
+                  </span>
+                </div>
+                {article.badge && (
+                  <Badge className={`${article.badge.color} text-white border-0`}>
+                    {article.badge.text}
+                  </Badge>
+                )}
               </div>
             </div>
           </div>
@@ -147,7 +155,34 @@ export default function Article() {
         {/* Footer */}
         <footer className="w-full border-t border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-8">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="flex items-center justify-center gap-6">
+                <a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                  <span className="text-sm font-details">Facebook</span>
+                </a>
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span className="text-sm font-details">Instagram</span>
+                </a>
+                <a 
+                  href="#sponsor" 
+                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Heart className="h-5 w-5" />
+                  <span className="text-sm font-details">Sponsor</span>
+                </a>
+              </div>
               <img 
                 src={theme === "dark" ? footerDark : footerLight}
                 alt="Footer decoration" 

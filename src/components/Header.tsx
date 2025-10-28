@@ -5,7 +5,12 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
-export function Header() {
+interface HeaderProps {
+  searchQuery?: string;
+  setSearchQuery?: (query: string) => void;
+}
+
+export function Header({ searchQuery = "", setSearchQuery }: HeaderProps) {
   return (
     <header className="w-full border-b bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,6 +34,8 @@ export function Header() {
                 type="search" 
                 placeholder="Search..." 
                 className="pl-9 w-64"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery?.(e.target.value)}
               />
             </div>
             <ThemeToggle />

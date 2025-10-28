@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Article } from "@/data/articles";
 
 interface ArticleCardProps {
@@ -18,13 +19,20 @@ export function ArticleCard({ article }: ArticleCardProps) {
           />
         </div>
         <CardHeader className="space-y-2 p-6">
-          <p className="text-sm text-muted-foreground font-details">
-            {new Date(article.date).toLocaleDateString('en-US', { 
-              month: 'short', 
-              day: 'numeric',
-              year: 'numeric'
-            })} • {article.author}
-          </p>
+          <div className="flex items-center gap-2 flex-wrap">
+            <p className="text-sm text-muted-foreground font-details">
+              {new Date(article.date).toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric',
+                year: 'numeric'
+              })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
+            </p>
+            {article.badge && (
+              <Badge className={`${article.badge.color} text-white border-0`}>
+                {article.badge.text}
+              </Badge>
+            )}
+          </div>
           <h3 className="text-xl font-semibold leading-tight font-title">
             {article.title}
           </h3>
