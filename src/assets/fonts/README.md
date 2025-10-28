@@ -1,34 +1,22 @@
 # Custom Fonts
 
-Place your custom font files (.otf or .ttf) in this directory:
+Place your custom font files in this directory:
 
 ## Required Font Files
-- `bold.otf` - Bold weight
-- `medium.otf` - Medium weight  
-- `air.otf` - Light/Air weight
-- `bold-italic.otf` - Bold italic variant
-- `medium-italic.otf` - Medium italic variant
+- `title.ttf` - Title font for article headings
+- `sfpro-medium.otf` - Details font for dates and authors
+- `normal-text-bold.otf` - Normal text bold weight
+- `normal-text-medium.otf` - Normal text medium weight (default body text)
+- `normal-text-light.otf` - Normal text light weight
+- `normal-text-italic-bold.otf` - Normal text bold italic variant
+- `normal-text-italic-medium.otf` - Normal text medium italic variant
+- `normal-text-italic-light.otf` - Normal text light italic variant
 
-## Using Custom Fonts in Articles
-
-In `src/data/articles.ts`, add the `fontFamily` property to any article:
-
-```typescript
-{
-  id: "example-article",
-  title: "Example Article",
-  // ... other properties
-  fontFamily: 'bold' // or 'custom-medium', 'custom-air', 'sans', 'serif'
-}
-```
-
-## Available Font Options
-- `'sans'` - Inter (default system font)
-- `'serif'` - Merriweather (default article font)
-- `'custom-bold'` - Your custom bold font
-- `'custom-medium'` - Your custom medium font
-- `'custom-air'` - Your custom air/light font
+## Font Usage
+- **Title font** (`title.ttf`) - Used for article titles
+- **Details font** (`sfpro-medium.otf`) - Used for article dates and author names
+- **Normal Text fonts** - Used for all body text, paragraphs, and content
 
 ## Note
-If no `fontFamily` is specified, articles will default to the serif font (Merriweather).
+All fonts are automatically configured in the project. The body text defaults to the medium weight variant.
 

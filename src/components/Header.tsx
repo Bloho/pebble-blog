@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import logoLight from "@/assets/logos/logo-light.svg";
 import logoDark from "@/assets/logos/logo-dark.svg";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 export function Header() {
   return (
     <header className="w-full border-b bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-center relative">
+        <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
               src={logoLight} 
@@ -20,7 +22,15 @@ export function Header() {
               className="h-8 hidden dark:block"
             />
           </Link>
-          <div className="absolute right-0">
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input 
+                type="search" 
+                placeholder="Search..." 
+                className="pl-9 w-64"
+              />
+            </div>
             <ThemeToggle />
           </div>
         </div>
