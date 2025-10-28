@@ -21,10 +21,10 @@ export interface Article {
   readTime: string;
   tags: string[];
   fontFamily?: 'sans' | 'serif' | 'custom-bold' | 'custom-medium' | 'custom-air';
-  badge?: {
+  badges?: {
     text: string;
     color: string;
-  };
+  }[];
 }
 
 export const articles: Article[] = [
@@ -37,10 +37,16 @@ export const articles: Article[] = [
     date: "2024-01-15",
     readTime: "5 min read",
     tags: ["Design", "Minimalism", "Lifestyle"],
-    badge: {
-      text: "Featured",
-      color: "bg-blue-500"
-    },
+    badges: [
+      {
+        text: "Featured",
+        color: "bg-blue-500"
+      },
+      {
+        text: "Design",
+        color: "bg-purple-500"
+      }
+    ],
     content: [
       { type: 'paragraph', content: "Minimalism isn't just about having less—it's about making room for more of what matters. In design, this philosophy translates into clean lines, purposeful spaces, and intentional choices that enhance rather than distract." },
       { type: 'heading', level: 2, content: 'The Philosophy Behind Minimalism' },
@@ -70,10 +76,12 @@ export const articles: Article[] = [
     date: "2024-01-10",
     readTime: "7 min read",
     tags: ["Productivity", "Creativity", "Personal Growth"],
-    badge: {
-      text: "Popular",
-      color: "bg-green-500"
-    },
+    badges: [
+      {
+        text: "Popular",
+        color: "bg-green-500"
+      }
+    ],
     content: [
       { type: 'paragraph', content: "Success isn't built in a day—it's constructed through the accumulation of small, consistent actions. For creatives, establishing the right habits can be the difference between sporadic bursts of productivity and sustained excellence." },
       { type: 'heading', level: 2, content: 'The Science of Habit Formation' },

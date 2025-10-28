@@ -27,11 +27,11 @@ export function ArticleCard({ article }: ArticleCardProps) {
                 year: 'numeric'
               })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
             </p>
-            {article.badge && (
-              <Badge className={`${article.badge.color} text-white border-0`}>
-                {article.badge.text}
+            {article.badges && article.badges.map((badge, index) => (
+              <Badge key={index} className={`${badge.color} text-white border-0`}>
+                {badge.text}
               </Badge>
-            )}
+            ))}
           </div>
           <h3 className="text-xl font-semibold leading-tight font-title">
             {article.title}

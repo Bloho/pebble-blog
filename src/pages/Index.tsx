@@ -38,40 +38,42 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
-          <div className="flex items-center justify-center gap-6">
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Facebook className="h-5 w-5" />
-              <span className="text-sm font-details">Facebook</span>
-            </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Instagram className="h-5 w-5" />
-              <span className="text-sm font-details">Instagram</span>
-            </a>
-            <a 
-              href="#sponsor" 
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Heart className="h-5 w-5" />
-              <span className="text-sm font-details">Sponsor</span>
-            </a>
+      <footer className="w-full border-t border-border mt-16">
+        <div className="px-8 sm:px-12 lg:px-16 py-8">
+          <div className="max-w-7xl mx-auto space-y-6">
+            <div className="flex items-center justify-between">
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+                <span className="text-sm font-details">Facebook</span>
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="text-sm font-details">Instagram</span>
+              </a>
+              <a 
+                href="#sponsor" 
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Heart className="h-5 w-5" />
+                <span className="text-sm font-details">Sponsor</span>
+              </a>
+            </div>
+            <img 
+              src={theme === "dark" ? footerDark : footerLight}
+              alt="Footer decoration" 
+              className="w-full h-auto object-cover"
+            />
           </div>
-          <img 
-            src={theme === "dark" ? footerDark : footerLight}
-            alt="Footer decoration" 
-            className="w-full h-auto object-cover"
-          />
         </div>
       </footer>
     </div>

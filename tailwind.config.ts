@@ -19,6 +19,7 @@ export default {
         title: ['Title', 'sans-serif'],
         details: ['Details', 'sans-serif'],
         'normal-text': ['NormalText', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       maxWidth: {
         'content': 'var(--content-width)',

@@ -55,11 +55,11 @@ export default function Article() {
                     })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
                   </span>
                 </div>
-                {article.badge && (
-                  <Badge className={`${article.badge.color} text-white border-0`}>
-                    {article.badge.text}
+                {article.badges && article.badges.map((badge, index) => (
+                  <Badge key={index} className={`${badge.color} text-white border-0`}>
+                    {badge.text}
                   </Badge>
-                )}
+                ))}
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function Article() {
         <footer className="w-full border-t border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-8">
             <div className="max-w-4xl mx-auto space-y-6">
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center justify-between">
                 <a 
                   href="https://facebook.com" 
                   target="_blank" 
