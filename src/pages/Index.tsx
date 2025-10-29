@@ -4,8 +4,10 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { articles } from "@/data/articles";
 import { useTheme } from "next-themes";
 import { Facebook, Instagram, Heart } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 import footerDark from "@/assets/footer-dark.svg";
 import footerLight from "@/assets/footer-light.svg";
+import heroImage from "@/assets/hero.svg";
 
 const Index = () => {
   const { theme } = useTheme();
@@ -21,6 +23,15 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+      {/* Hero Image */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <img 
+          src={heroImage} 
+          alt="Hero banner" 
+          className="w-full h-auto object-cover"
+        />
+      </section>
 
       {/* Articles Grid */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -41,7 +52,7 @@ const Index = () => {
       <footer className="w-full border-t border-border mt-16">
         <div className="px-8 sm:px-12 lg:px-16 py-8">
           <div className="max-w-7xl mx-auto space-y-6">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-4">
               <a 
                 href="https://facebook.com" 
                 target="_blank" 
@@ -68,7 +79,8 @@ const Index = () => {
                 <span className="text-sm font-details">Sponsor</span>
               </a>
             </div>
-            <img 
+            <Separator className="my-4" />
+            <img
               src={theme === "dark" ? footerDark : footerLight}
               alt="Footer decoration" 
               className="w-full h-auto object-cover"

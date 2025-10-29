@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowLeft, Facebook, Instagram, Heart } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 import footerDark from "@/assets/footer-dark.svg";
 import footerLight from "@/assets/footer-light.svg";
@@ -156,7 +157,7 @@ export default function Article() {
         <footer className="w-full border-t border-border">
           <div className="px-8 sm:px-12 lg:px-16 py-8">
             <div className="max-w-4xl mx-auto space-y-6">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-4">
                 <a 
                   href="https://facebook.com" 
                   target="_blank" 
@@ -183,7 +184,8 @@ export default function Article() {
                   <span className="text-sm font-details">Sponsor</span>
                 </a>
               </div>
-              <img 
+              <Separator className="my-4" />
+              <img
                 src={theme === "dark" ? footerDark : footerLight}
                 alt="Footer decoration" 
                 className="w-full h-auto object-cover"

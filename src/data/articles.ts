@@ -3,12 +3,13 @@ import article2Thumb from "@/assets/thumbnails/article-2.png";
 import article3Thumb from "@/assets/thumbnails/article-3.png";
 import article4Thumb from "@/assets/thumbnails/article-4.png";
 
+// Simplified content block structure for easy article creation
 export type ContentBlock = 
-  | { type: 'paragraph'; content: string }
-  | { type: 'heading'; level: 2 | 3; content: string }
-  | { type: 'image'; src: string; alt: string; caption?: string }
-  | { type: 'quote'; content: string }
-  | { type: 'list'; ordered: boolean; items: string[] };
+  | { type: 'paragraph'; content: string }                              // Regular text paragraph
+  | { type: 'heading'; level: 2 | 3; content: string }                  // Section headings (h2 or h3)
+  | { type: 'image'; src: string; alt: string; caption?: string }       // Images with optional captions
+  | { type: 'quote'; content: string }                                   // Blockquotes
+  | { type: 'list'; ordered: boolean; items: string[] };                // Bullet or numbered lists
 
 export interface Article {
   id: string;
