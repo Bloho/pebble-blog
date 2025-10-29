@@ -5,6 +5,7 @@ import { articles } from "@/data/articles";
 import { useTheme } from "next-themes";
 import { Facebook, Instagram, Heart } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import footerDark from "@/assets/footer-dark.svg";
 import footerLight from "@/assets/footer-light.svg";
 import heroImage from "@/assets/hero.svg";
@@ -35,7 +36,7 @@ const Index = () => {
 
       {/* Articles Grid */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
-        <div className="content-grid gap-8">
+        <div className="content-grid gap-[30px]">
           {filteredArticles.length > 0 ? (
             filteredArticles.map((article) => (
               <ArticleCard key={article.id} article={article} />
@@ -46,6 +47,7 @@ const Index = () => {
             </div>
           )}
         </div>
+        <ProgressiveBlur height="20%" position="bottom" />
       </section>
 
       {/* Footer */}
