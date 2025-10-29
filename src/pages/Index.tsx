@@ -34,7 +34,7 @@ const Index = () => {
       </section>
 
       {/* Articles Grid */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
         <div className="content-grid gap-8">
           {filteredArticles.length > 0 ? (
             filteredArticles.map((article) => (
