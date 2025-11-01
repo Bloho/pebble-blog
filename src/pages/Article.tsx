@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,10 @@ export default function Article() {
   const { id } = useParams<{ id: string }>();
   const article = id ? getArticleById(id) : undefined;
   const { theme } = useTheme();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!article) {
     return (

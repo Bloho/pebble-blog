@@ -191,26 +191,11 @@ All colors MUST be HSL.
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    border-left: 1px solid hsl(var(--border));
-    border-right: 1px solid hsl(var(--border));
-  }
-
-  .content-grid > * {
-    border-right: 1px solid hsl(var(--border));
-    border-bottom: 1px solid hsl(var(--border));
-  }
-
-  .content-grid > *:nth-child(2n) {
-    border-right: none;
   }
 
   @media (max-width: 768px) {
     .content-grid {
       grid-template-columns: 1fr;
-    }
-    
-    .content-grid > * {
-      border-right: none;
     }
   }
 
