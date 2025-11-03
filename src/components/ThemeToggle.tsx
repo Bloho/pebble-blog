@@ -6,16 +6,20 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   const handleThemeChange = () => {
-    // Add theme transition class
+    const newTheme = theme === "light" ? "dark" : "light";
+    
+    // Add theme transition class and direction class
     document.body.classList.add('theme-transitioning');
+    document.body.classList.add(`transitioning-to-${newTheme}`);
     
     // Change theme
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(newTheme);
     
-    // Remove transition class after animation
+    // Remove transition classes after animation
     setTimeout(() => {
       document.body.classList.remove('theme-transitioning');
-    }, 600);
+      document.body.classList.remove(`transitioning-to-${newTheme}`);
+    }, 500);
   };
 
   return (

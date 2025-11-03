@@ -139,6 +139,10 @@ All colors MUST be HSL.
                 border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -170,14 +174,14 @@ All colors MUST be HSL.
     opacity: 1;
   }
 
-  /* Light mode transition overlay */
-  body:not(.dark).theme-transitioning::before {
-    background: rgba(255, 255, 255, 0.8);
+  /* White overlay when transitioning to light mode */
+  body.transitioning-to-light::before {
+    background: rgba(255, 255, 255, 0.9);
   }
 
-  /* Dark mode transition overlay */
-  body.dark.theme-transitioning::before {
-    background: rgba(0, 0, 0, 0.8);
+  /* Black overlay when transitioning to dark mode */
+  body.transitioning-to-dark::before {
+    background: rgba(0, 0, 0, 0.9);
   }
 
   body {
