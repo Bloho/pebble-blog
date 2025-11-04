@@ -9,7 +9,9 @@ export type ContentBlock =
   | { type: 'heading'; level: 2 | 3; content: string }                  // Section headings (h2 or h3)
   | { type: 'image'; src: string; alt: string; caption?: string }       // Images with optional captions
   | { type: 'quote'; content: string }                                   // Blockquotes
-  | { type: 'list'; ordered: boolean; items: string[] };                // Bullet or numbered lists
+  | { type: 'list'; ordered: boolean; items: string[] }                 // Bullet or numbered lists
+  | { type: 'code'; language: string; content: string }                 // Code blocks with syntax highlighting
+  | { type: 'video'; url: string; caption?: string };                   // YouTube/Vimeo video embeds
 
 export interface Article {
   id: string;
