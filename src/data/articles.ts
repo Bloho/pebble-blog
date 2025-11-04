@@ -63,6 +63,7 @@ export const articles: Article[] = [
         'Layout: Generous spacing that lets content breathe',
         'Navigation: Intuitive paths that don\'t overwhelm'
       ]},
+      { type: 'video', url: 'https://www.youtube.com/watch?v=RBbxEfQzzAw&pp=ygUKZGVtbyB2aWRlbw%3D%3D', caption: 'A visual demonstration of minimalist design principles' },
       { type: 'heading', level: 2, content: 'Finding Balance' },
       { type: 'paragraph', content: "The challenge isn't in removing elements—it's in knowing what to keep. Each component must earn its place through function, beauty, or both. This discernment is what separates sterile emptiness from elegant simplicity." },
       { type: 'quote', content: 'Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away. — Antoine de Saint-Exupéry' },
