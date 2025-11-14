@@ -9,7 +9,9 @@ export type ContentBlock =
   | { type: 'heading'; level: 2 | 3; content: string }                  // Section headings (h2 or h3)
   | { type: 'image'; src: string; alt: string; caption?: string }       // Images with optional captions
   | { type: 'quote'; content: string }                                   // Blockquotes
-  | { type: 'list'; ordered: boolean; items: string[] };                // Bullet or numbered lists
+  | { type: 'list'; ordered: boolean; items: string[] }                 // Bullet or numbered lists
+  | { type: 'code'; language: string; content: string }                 // Code blocks with syntax highlighting
+  | { type: 'video'; url: string; caption?: string };                   // YouTube/Vimeo video embeds
 
 export interface Article {
   id: string;
@@ -97,6 +99,26 @@ export const articles: Article[] = [
         'Layout: Generous spacing that lets content breathe',
         'Navigation: Intuitive paths that don\'t overwhelm'
       ]},
+      { type: 'code', language: 'css', content: `/* Minimalist design approach */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: hsl(0, 0%, 10%);
+}
+
+.content {
+  color: hsl(0, 0%, 20%);
+  letter-spacing: 0.01em;
+}` },
+      { type: 'video', url: 'https://www.youtube.com/watch?v=RBbxEfQzzAw&pp=ygUKZGVtbyB2aWRlbw%3D%3D', caption: 'A visual demonstration of minimalist design principles' },
       { type: 'heading', level: 2, content: 'Finding Balance' },
       { type: 'paragraph', content: "The challenge isn't in removing elements—it's in knowing what to keep. Each component must earn its place through function, beauty, or both. This discernment is what separates sterile emptiness from elegant simplicity." },
       { type: 'quote', content: 'Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away. — Antoine de Saint-Exupéry' },

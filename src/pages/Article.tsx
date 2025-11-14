@@ -150,6 +150,55 @@ export default function Article() {
                       </ListTag>
                     );
                   
+                  case 'code':
+                    return (
+                      <div key={index} className="my-8">
+                        <pre className="bg-muted p-6 rounded-lg overflow-x-auto border border-border">
+                          <code className="text-sm font-mono text-foreground">
+                            {block.content}
+                          </code>
+                        </pre>
+                        {block.language && (
+                          <p className="text-xs text-muted-foreground mt-2 font-details">
+                            {block.language}
+                          </p>
+                        )}
+                      </div>
+                    );
+                  
+                  case 'video':
+                    const getVideoEmbedUrl = (url: string) => {
+                      if (url.includes('youtube.com') || url.includes('youtu.be')) {
+                        const videoId = url.includes('youtu.be') 
+                          ? url.split('youtu.be/')[1]?.split('?')[0]
+                          : url.split('v=')[1]?.split('&')[0];
+                        return `https://www.youtube.com/embed/${videoId}`;
+                      }
+                      if (url.includes('vimeo.com')) {
+                        const videoId = url.split('vimeo.com/')[1]?.split('?')[0];
+                        return `https://player.vimeo.com/video/${videoId}`;
+                      }
+                      return url;
+                    };
+                    
+                    return (
+                      <figure key={index} className="my-16">
+                        <div className="aspect-video overflow-hidden rounded-lg">
+                          <iframe
+                            src={getVideoEmbedUrl(block.url)}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        </div>
+                        {block.caption && (
+                          <figcaption className="text-sm text-muted-foreground mt-4 text-center italic">
+                            {block.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  
                   default:
                     return null;
                 }
