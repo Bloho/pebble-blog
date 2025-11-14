@@ -31,42 +31,7 @@ export interface Article {
 }
 
 export const articles: Article[] = [
-  // Add this to your articles.ts file:
 
-{
-  "id": "why-the-helly-this-works",
-  "title": "Why the helly this works",
-  "excerpt": "short description?",
-  "content": [
-    {
-      "type": "heading",
-      "level": 2,
-      "content": "header 1"
-    },
-    {
-      "type": "paragraph",
-      "content": "donawidnowid"
-    },
-    {
-      "type": "paragraph",
-      "content": "faofiwbofib"
-    },
-    {
-      "type": "image",
-      "src": "https://i.natgeofe.com/n/70bd7d0f-68e7-495a-906b-9d1eca8976ef/MM10330_241112_00794_4x3.jpg?w=800&h=600",
-      "alt": "nat geo ig",
-      "caption": "whooosho stole image"
-    }
-  ],
-  "thumbnail": "// Add your thumbnail import here",
-  "author": "Ayush Samanta",
-  "date": "2025-11-07",
-  "readTime": "2 min read",
-  "tags": [
-    "Design",
-    "12th"
-  ]
-},
   {
     id: "the-art-of-minimalism",
     title: "Wow look at that whale! This is a sample text!",
