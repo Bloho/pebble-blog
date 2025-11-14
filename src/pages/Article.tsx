@@ -164,7 +164,7 @@ export default function Article() {
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="flex items-center justify-between gap-4">
                 <a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/DPSPanipatref/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -173,7 +173,7 @@ export default function Article() {
                   <span className="text-sm font-details">Facebook</span>
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/dps_panipatrefinery/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
@@ -182,11 +182,13 @@ export default function Article() {
                   <span className="text-sm font-details">Instagram</span>
                 </a>
                 <a 
-                  href="#sponsor" 
+                  href="https://dpspr.edu.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Heart className="h-5 w-5" />
-                  <span className="text-sm font-details">Sponsor</span>
+                  <span className="text-sm font-details">School</span>
                 </a>
               </div>
               <Separator className="my-4" />
