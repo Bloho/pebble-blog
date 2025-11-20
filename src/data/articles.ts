@@ -96,7 +96,7 @@ export const articles: Article[] = [
     },
     {
       "type": "paragraph",
-      "content": "First of all we will be using this custom uploading web app to handle the uploading process. URL for this website is “attach the link”"
+      "content": "First of all we will be using this custom uploading web app to handle the uploading process. URL for this website is “article-drop.vercel.app”"
     },
     {
       "type": "paragraph",
