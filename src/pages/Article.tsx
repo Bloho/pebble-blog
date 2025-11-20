@@ -247,7 +247,7 @@ export default function Article() {
                   <span className="text-sm font-details">Instagram</span>
                 </a>
                 <a 
-                  href="https://dpspr.edu.in" 
+                  href="https://www.dpspr.edu.in" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
