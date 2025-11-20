@@ -55,7 +55,7 @@ export const articles: Article[] = [
     },
     {
       "type": "paragraph",
-      "content": "This is the most time taking process (upto a week) to upload your blog, if you want a faster way, just to SECOND WAY. This is the step where you can just mail your work in the form of pdf to [shield@dpspr.edu.in](mailto:shield@dpspr.edu.in), which will of course take some time (Maybe a week) as your pdf needs to be converted into the format of our blog. Incase you have images in your article (Highly reccomended), you have to “link” the image in your pdf. So basically instead of just uploading he image in your pdf, you upload the link of the image, and make sure the link of the image is hosted in a reliable source. Such as Wikipedia, Freepik, Pixabay, Pexels, Unsplash, X, Freeimages, Shutterstock, etc. This process is not recommended at all, but we accept it."
+      "content": "This is the most time taking process (upto a week) to upload your blog, if you want a faster way, just skip to the SECOND WAY. This is the step where you can just mail your work in the form of pdf to [shield@dpspr.edu.in](mailto:shield@dpspr.edu.in), which will of course take some time (Maybe a week) as your pdf needs to be converted into the format of our blog. Incase you have images in your article (Highly reccomended), you have to “link” the image in your pdf. So basically instead of just uploading he image in your pdf, you upload the link of the image, and make sure the link of the image is hosted in a reliable source. Such as Wikipedia, Freepik, Pixabay, Pexels, Unsplash, X, Freeimages, Shutterstock, etc. This process is not recommended at all, but we accept it."
     },
     {
       "type": "image",
