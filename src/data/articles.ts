@@ -31,40 +31,7 @@ export interface Article {
 }
 
 export const articles: Article[] = [
-  {
-    id: "power-of-simplicity",
-    title: "The Power of Simplicity in Communication",
-    excerpt: "Why clear, concise messaging resonates more deeply than complex explanations.",
-    thumbnail: article3Thumb,
-    author: "Elena Martinez",
-    date: "2024-01-05",
-    readTime: "4 min read",
-    tags: ["Communication", "Writing", "Design"],
-    content: [
-      { type: 'paragraph', content: "In an age of information overload, simplicity isn't just preferred—it's essential. Whether you're writing copy, designing interfaces, or presenting ideas, the ability to distill complexity into clarity is a superpower." },
-      { type: 'heading', level: 2, content: 'Why Simplicity Wins' },
-      { type: 'paragraph', content: "Our brains are wired to prefer simplicity. Complex messages require more cognitive effort to process, and in today's fast-paced world, that effort often isn't available. Simple communication:" },
-      { type: 'list', ordered: false, items: [
-        'Reduces friction: Makes understanding effortless',
-        'Increases retention: Memorable messages stick',
-        'Builds trust: Clarity signals confidence',
-        'Drives action: Clear calls-to-action convert'
-      ]},
-      { type: 'image', src: article3Thumb, alt: 'Simple communication design', caption: 'Simplicity in design creates clarity in communication' },
-      { type: 'heading', level: 2, content: 'The Art of Reduction' },
-      { type: 'paragraph', content: "Simplifying isn't about dumbing down—it's about refining. It requires understanding your core message, identifying what's essential, removing everything else, and testing for clarity." },
-      { type: 'heading', level: 2, content: 'In Practice' },
-      { type: 'paragraph', content: 'Consider these transformations:' },
-      { type: 'paragraph', content: 'Before: "Utilize our comprehensive suite of integrated solutions to optimize your workflow efficiency parameters."' },
-      { type: 'paragraph', content: 'After: "Work smarter with our simple tools."' },
-      { type: 'paragraph', content: "The second version is shorter, clearer, and more impactful. It respects the reader's time and attention." },
-      { type: 'heading', level: 2, content: 'Visual Simplicity' },
-      { type: 'paragraph', content: "The same principles apply to design. White space isn't empty—it's strategic. It creates hierarchy, improves comprehension, and makes interfaces feel effortless to use." },
-      { type: 'heading', level: 2, content: 'The Challenge' },
-      { type: 'paragraph', content: 'Simplicity is harder than complexity. It requires discipline, editing, and often multiple iterations. But the payoff—in understanding, engagement, and results—is always worth the effort.' },
-      { type: 'paragraph', content: 'Start by asking: What can I remove without losing meaning?' }
-    ]
-  },
+  
 // Add this to your articles.ts file:
 
 {
