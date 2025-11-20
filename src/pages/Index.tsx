@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { ArticleCard } from "@/components/ArticleCard";
+import { NotificationBanner } from "@/components/NotificationBanner";
 import { articles } from "@/data/articles";
 import { useTheme } from "next-themes";
 import { Facebook, Instagram, Heart } from "lucide-react";
@@ -22,6 +23,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <NotificationBanner />
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* Hero Image */}
