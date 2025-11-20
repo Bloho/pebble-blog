@@ -4,7 +4,7 @@ import { getArticleById } from "@/data/articles";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ArrowLeft, Facebook, Instagram, Heart } from "lucide-react";
+import { Calendar, ArrowLeft, Facebook, Instagram, School } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 import footerDark from "@/assets/footer-dark.svg";
@@ -252,7 +252,7 @@ export default function Article() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  <Heart className="h-5 w-5" />
+                  <School className="h-5 w-5" />
                   <span className="text-sm font-details">School</span>
                 </a>
               </div>
