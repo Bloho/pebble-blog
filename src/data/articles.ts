@@ -1,4 +1,4 @@
-import article1Thumb from "@/assets/thumbnails/article-1.avif";
+import article1Thumb from "@/assets/thumbnails/article-1.png";
 import article2Thumb from "@/assets/thumbnails/article-2.png";
 import article3Thumb from "@/assets/thumbnails/article-3.png";
 import article4Thumb from "@/assets/thumbnails/article-4.png";
@@ -31,104 +31,6 @@ export interface Article {
 }
 
 export const articles: Article[] = [
-
-  {
-    id: "the-art-of-minimalism",
-    title: "Wow look at that whale! This is a sample text!",
-    excerpt: "Exploring how less can truly be more in contemporary design practices and everyday life.",
-    thumbnail: article1Thumb,
-    author: "Sabrina Lee",
-    date: "2024-01-15",
-    readTime: "5 min read",
-    tags: ["Design", "Minimalism", "Lifestyle"],
-    badges: [
-      {
-        text: "12th",
-        color: "bg-blue-500"
-      },
-      {
-        text: "Design",
-        color: "bg-purple-500"
-      }
-    ],
-    content: [
-      { type: 'paragraph', content: "Minimalism isn't just about having less—it's about making room for more of what matters. In design, this philosophy translates into clean lines, purposeful spaces, and intentional choices that enhance rather than distract." },
-      { type: 'heading', level: 2, content: 'The Philosophy Behind Minimalism' },
-      { type: 'paragraph', content: "At its core, minimalism is about intentionality. Every element serves a purpose, every color choice is deliberate, and every piece of white space is carefully considered. This approach doesn't mean stripping away personality or warmth; rather, it means amplifying the essential while removing the superfluous." },
-      { type: 'image', src: article1Thumb, alt: 'Minimalist design concept', caption: 'Clean lines and purposeful spaces define modern minimalism' },
-      { type: 'heading', level: 2, content: 'Practical Applications' },
-      { type: 'paragraph', content: 'In modern web design, minimalism manifests through:' },
-      { type: 'list', ordered: false, items: [
-        'Typography: Clear, readable fonts that guide the eye',
-        'Color: Restrained palettes that create harmony',
-        'Layout: Generous spacing that lets content breathe',
-        'Navigation: Intuitive paths that don\'t overwhelm'
-      ]},
-      { type: 'code', language: 'css', content: `/* Minimalist design approach */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  line-height: 1.6;
-}
-
-.heading {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: hsl(0, 0%, 10%);
-}
-
-.content {
-  color: hsl(0, 0%, 20%);
-  letter-spacing: 0.01em;
-}` },
-      { type: 'video', url: 'https://www.youtube.com/watch?v=RBbxEfQzzAw&pp=ygUKZGVtbyB2aWRlbw%3D%3D', caption: 'A visual demonstration of minimalist design principles' },
-      { type: 'heading', level: 2, content: 'Finding Balance' },
-      { type: 'paragraph', content: "The challenge isn't in removing elements—it's in knowing what to keep. Each component must earn its place through function, beauty, or both. This discernment is what separates sterile emptiness from elegant simplicity." },
-      { type: 'quote', content: 'Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away. — Antoine de Saint-Exupéry' },
-      { type: 'heading', level: 2, content: 'Moving Forward' },
-      { type: 'paragraph', content: 'As we continue to be bombarded with information and options, minimalist design offers a refuge—a clear space where focus and clarity reign. Whether you\'re designing a website, an app, or simply organizing your workspace, the principles remain the same: start with purpose, refine with intention, and always ask, "Is this essential?"' }
-    ]
-  },
-  {
-    id: "building-better-habits",
-    title: "Building Better Habits for Creative Success",
-    excerpt: "Small daily practices that compound into significant creative achievements over time.",
-    thumbnail: article2Thumb,
-    author: "Marcus Reid",
-    date: "2024-01-10",
-    readTime: "7 min read",
-    tags: ["Productivity", "Creativity", "Personal Growth"],
-    badges: [
-      {
-        text: "Popular",
-        color: "bg-green-500"
-      }
-    ],
-    content: [
-      { type: 'paragraph', content: "Success isn't built in a day—it's constructed through the accumulation of small, consistent actions. For creatives, establishing the right habits can be the difference between sporadic bursts of productivity and sustained excellence." },
-      { type: 'heading', level: 2, content: 'The Science of Habit Formation' },
-      { type: 'paragraph', content: 'Understanding how habits form is the first step to building better ones. The habit loop—cue, routine, reward—provides a framework for creating lasting behavioral change. When we align this loop with our creative goals, magic happens.' },
-      { type: 'image', src: article2Thumb, alt: 'Creative workspace for building habits', caption: 'A dedicated space helps reinforce positive creative habits' },
-      { type: 'heading', level: 2, content: 'Morning Rituals That Work' },
-      { type: 'paragraph', content: 'The first hours of the day set the tone for everything that follows. Successful creatives often share common morning practices:' },
-      { type: 'list', ordered: true, items: [
-        'Early rising: Capturing the quiet hours before the world awakens',
-        'Movement: Physical activity to energize body and mind',
-        'Creative work first: Tackling the most important work while fresh',
-        'Minimal decision-making: Reducing cognitive load through routine'
-      ]},
-      { type: 'heading', level: 2, content: 'Protecting Creative Time' },
-      { type: 'paragraph', content: 'In a world of constant interruptions, protecting creative time requires intentional boundaries. This means setting clear working hours, turning off notifications during deep work, communicating boundaries to others, and creating a dedicated workspace.' },
-      { type: 'heading', level: 2, content: 'The Power of Documentation' },
-      { type: 'paragraph', content: 'Keeping a creative journal or log serves multiple purposes. It tracks progress, captures fleeting ideas, and provides a record of growth. Over time, these entries become valuable reference points and sources of inspiration.' },
-      { type: 'heading', level: 2, content: 'Consistency Over Intensity' },
-      { type: 'paragraph', content: "The most powerful habit isn't working yourself to exhaustion—it's showing up consistently. Whether it's writing for 30 minutes daily or sketching before bed, regular practice compounds into remarkable results." },
-      { type: 'heading', level: 3, content: 'Start Small' },
-      { type: 'paragraph', content: 'Begin with one habit. Master it. Then add another. This patient approach builds confidence and creates sustainable change that lasts.' }
-    ]
-  },
   {
     id: "power-of-simplicity",
     title: "The Power of Simplicity in Communication",
@@ -163,42 +65,237 @@ export const articles: Article[] = [
       { type: 'paragraph', content: 'Start by asking: What can I remove without losing meaning?' }
     ]
   },
-  {
-    id: "future-of-remote-work",
-    title: "The Future of Remote Work and Digital Creativity",
-    excerpt: "How distributed teams are reshaping the creative landscape and what it means for collaboration.",
-    thumbnail: article4Thumb,
-    author: "David Kim",
-    date: "2024-01-01",
-    readTime: "6 min read",
-    tags: ["Remote Work", "Technology", "Collaboration"],
-    content: [
-      { type: 'paragraph', content: 'The shift to remote work has fundamentally changed how creative teams operate. What started as a necessity has evolved into a new paradigm—one that offers both unprecedented opportunities and unique challenges.' },
-      { type: 'heading', level: 2, content: 'The New Creative Landscape' },
-      { type: 'paragraph', content: 'Remote work has democratized access to creative opportunities. Geography no longer dictates career possibilities, and diverse teams can form based on talent rather than location. This shift brings:' },
-      { type: 'list', ordered: false, items: [
-        'Global talent pools: Access to specialists worldwide',
-        'Flexible schedules: Work when you\'re most productive',
-        'Reduced overhead: Lower costs for businesses and individuals',
-        'Environmental benefits: Fewer commutes, smaller carbon footprints'
-      ]},
-      { type: 'image', src: article4Thumb, alt: 'Remote work setup', caption: 'The modern remote workspace enables creativity from anywhere' },
-      { type: 'heading', level: 2, content: 'Challenges and Solutions' },
-      { type: 'heading', level: 3, content: 'Communication Gaps' },
-      { type: 'paragraph', content: 'Without in-person interaction, miscommunication can derail projects. Solutions include async-first communication with detailed written updates, regular video check-ins for maintaining human connection, and clear documentation creating single sources of truth.' },
-      { type: 'heading', level: 3, content: 'Creative Collaboration' },
-      { type: 'paragraph', content: 'Some worry that remote work stifles spontaneous collaboration. The reality is more nuanced. While water-cooler moments are rare, intentional collaboration can be more focused and productive.' },
-      { type: 'heading', level: 2, content: 'Tools That Enable' },
-      { type: 'paragraph', content: 'The right tools make remote creative work possible: design platforms like Figma and Miro, project management systems that keep everyone aligned, communication tools like Slack and Zoom, and cloud storage for shared files accessible anywhere.' },
-      { type: 'heading', level: 2, content: 'The Hybrid Future' },
-      { type: 'paragraph', content: "The future isn't fully remote or fully in-office—it's hybrid. Companies are finding that flexible arrangements attract top talent and improve satisfaction. The key is giving teams autonomy to choose what works best." },
-      { type: 'heading', level: 2, content: 'Building Culture Remotely' },
-      { type: 'paragraph', content: "Strong culture doesn't require physical proximity. It requires shared values and clear mission, regular communication and transparency, virtual social opportunities, and recognition and celebration of wins." },
-      { type: 'heading', level: 2, content: 'Embracing the Change' },
-      { type: 'paragraph', content: "Remote work isn't a temporary trend—it's a permanent evolution. Creative professionals who embrace this shift, master its tools, and learn to collaborate across distances will thrive in this new landscape." },
-      { type: 'paragraph', content: 'The future of work is flexible, global, and full of possibility.' }
-    ]
-  }
+// Add this to your articles.ts file:
+
+{
+  "id": "getting-started",
+  "title": "Getting Started",
+  "excerpt": "This article is about how upload your article to Excelsior.",
+  "thumbnail": "https://pbs.twimg.com/media/G58cmSCbAAAztru?format=jpg&name=large",
+  "author": "Ayush Samanta",
+  "date": "2025-11-17",
+  "readTime": "23 min read",
+  "tags": [ "President of SHIELD","Info"],
+  "content": [
+    {
+      "type": "paragraph",
+      "content": "This is the first time our school is dealing with infrastructure at this scale, so I have kept it very simple, and includes a few extra steps ( no code, don’t worry)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "FIRST WAY: Not recommended"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is the most time taking process (upto a week) to upload your blog, if you want a faster way, just to SECOND WAY. This is the step where you can just mail your work in the form of pdf to [shield@dpspr.edu.in](mailto:shield@dpspr.edu.in), which will of course take some time (Maybe a week) as your pdf needs to be converted into the format of our blog. Incase you have images in your article (Highly reccomended), you have to “link” the image in your pdf. So basically instead of just uploading he image in your pdf, you upload the link of the image, and make sure the link of the image is hosted in a reliable source. Such as Wikipedia, Freepik, Pixabay, Pexels, Unsplash, X, Freeimages, Shutterstock, etc. This process is not recommended at all, but we accept it."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58KYHhaoAAP5bQ?format=jpg&name=medium",
+      "alt": "",
+      "caption": "We just need the link! Not the image itself."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "SECOND WAY: Recommended"
+    },
+    {
+      "type": "paragraph",
+      "content": "If you want your article to be uploaded very fast (est. 24 hours) you can just follow the steps below. This will probably take 10 minutes of your time! I’ll always reccommend you using this as this will provide the flexibility and freedom to customise your tags (explained later), format, and you can even preview the blog before publishing!"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Step 0: Get your article ready "
+    },
+    {
+      "type": "paragraph",
+      "content": "I recommend you to get your article ready before we start the submission process. You can use any application to do this step, with some guidelines I’ll mention under this section. You can use Google Docs, Microsoft Word, Notion, etc."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Make sure your article is well structured (Well defined Title, Headings, Paragraphs)",
+        "If your article includes images, make sure you have the LINK to the image, not the image itself. We are not supporting the ability to upload images directly to the blog as it needs more manual work to lossless compress the images, otherwise it will affect the latency of the website. I’ll give you a quick example in this article later."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Step 1: Uploading text"
+    },
+    {
+      "type": "paragraph",
+      "content": "First of all we will be using this custom uploading web app to handle the uploading process. URL for this website is “attach the link”"
+    },
+    {
+      "type": "paragraph",
+      "content": "Carefully, enter all your details first before heading towards “Content Blocks”."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58QLWzbUAAuhPN?format=jpg&name=medium",
+      "alt": "",
+      "caption": "Dashboard"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Tags:"
+    },
+    {
+      "type": "paragraph",
+      "content": "Tags are badges assigned to each articles. It is visible in the homepage, as well as the individual article pages. "
+    },
+    {
+      "type": "paragraph",
+      "content": "In case of me, \"President of SHIELD\" and \"Info\" are my tags. “Info” here is basically the category of the article. You are allowed to tag yourself to a maximum of 3 (Your class, category and council if you are part of one)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Content blocks:"
+    },
+    {
+      "type": "paragraph",
+      "content": "To keep things smooth and easy, you are going to upload your article using blocks. It’s really simple. You simple start by pressing “+” on the top-right side of the content block box. You will see something like this:"
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58RehhbMAAcRK-?format=jpg&name=medium",
+      "alt": "",
+      "caption": "When you click (+) you will see these options"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now click “Heading” to add your heading to your paragraph, and write your content inside it. If you have multiple paragraphs, with multiple headings, then simply use as much headings and texts you like. We also have the feature to add Quotes, Images, Youtube /Vimeo imbeds, etc. Make sure you preview everything before exporting."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Now, how to add images"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you press “+”, you can see the option to add images too. So click that."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58RehhbMAAcRK-?format=jpg&name=medium",
+      "alt": "",
+      "caption": "Click Image to add image source"
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58SvBsaYAE3qnA?format=jpg&name=medium",
+      "alt": "",
+      "caption": "You will see 3 boxes, which you need to fill up."
+    },
+    {
+      "type": "paragraph",
+      "content": "Let’s say I want to use this image of these gold crystals in my article, from Wikipedia."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58TE64aUAEqfXF?format=jpg&name=large",
+      "alt": "",
+      "caption": "Screenshot of wikipedia image preview"
+    },
+    {
+      "type": "paragraph",
+      "content": "I will just right click to open the context menu, and click “Copy image address” or you can “Open Image in new tab” and take the url from there aswell."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58TE7eaQAAYGEP?format=png&name=medium",
+      "alt": "",
+      "caption": ""
+    },
+    {
+      "type": "paragraph",
+      "content": "I will paste the url of the image in the first box, the second box is for your “best description” of your image. Keep in mind, what you write in the Alt text is not visible in the article, but is used to show your image in search results, with matching keywords. Moving onto the third box, this is the caption of the image, which will be visible in your article. You have to credit the owner/author of the image here as well."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58emrcbUAEfKvZ?format=png&name=medium",
+      "alt": "",
+      "caption": "Filling up the source of the image"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now make sure the image you are using lets you attribute the author of the image. You can see the author/owner of the image in the down-left side of the image in wikipedia preview page. If the image is in \"Public domain\", you don't need to credit anyone."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58TE7CbUAAl9lg?format=jpg&name=large",
+      "alt": "",
+      "caption": "The highlighted part is the author of the image."
+    },
+    {
+      "type": "paragraph",
+      "content": "You can go to Preview to preview your changes."
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58VP_ga0AA5cHY?format=jpg&name=medium",
+      "alt": "",
+      "caption": "Go to \"Preview\" on the top of the website to preview your changes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now if you are using your own image, you need to have it online first. You can do this easily by uploading it to any social media website. I recommend you use X.com (Ex- Twitter) or you can use GitHub as well if you are familiar with it. Make sure if you use any other websites, you don’t delete the images from your own account, as it will not show in the article after its published in our article."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "EXPORTING: The second final step"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you finish checking everything in the preview section, you click the export button on top. An article.txt file will automatically start downloading. Beware of the fact, that if you refresh the webpage without exporting your article, you will lose your progress. After exporting, you will get a notification. Your file should start downloading automatically. If not, the code gets copied to your clipboard too, so you can just go to any text editor, save the texts and export it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Sending the your article to us: The last step!"
+    },
+    {
+      "type": "paragraph",
+      "content": "Now take that text file and send it to shield@dpspr.edu.in, with your name, class, section, roll no and topic. "
+    },
+    {
+      "type": "image",
+      "src": "https://pbs.twimg.com/media/G58fkiHaQAAhMSZ?format=jpg&name=large",
+      "alt": "",
+      "caption": "Mailing it to shield@dpspr.edu.in"
+    },
+    {
+      "type": "paragraph",
+      "content": "And congrats! We have your article! You will see your article up on the blog in very little time, not more than 48 hours. If you don’t see the article uploaded even after 48 hours, reach us to at shield@dpspr.edu.in or contact your class teacher to relay it to the faculty of computer science."
+    },
+    {
+      "type": "paragraph",
+      "content": "If any updates are required, you will be contacted to the same email, so make sure you regularly check your inboxes during the 48 hour period or unless your article is visible in the website."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Concluding"
+    },
+    {
+      "type": "paragraph",
+      "content": "You’re now fully equipped to take your ideas from draft to publication and make your mark on this platform. This is not just another student blog. It is a space built end to end for you, by someone who genuinely believes students deserve a professional grade outlet. I designed the entire ecosystem: the website, the UI/UX, the backend infrastructure, the workflows, all with one objective. I want your work to have the stage it deserves.\n"
+    },
+    {
+      "type": "paragraph",
+      "content": "So don’t hold back. Upload your article, push your thinking, and showcase the kind of insight that sets you apart. The platform is ready. Now it is your move. All the best!"
+    }
+  ]
+}
+  
 ];
 
 export function getArticleById(id: string): Article | undefined {

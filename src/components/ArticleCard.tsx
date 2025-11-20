@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Article } from "@/data/articles";
+import { getTagColor } from "@/lib/utils";
 
 interface ArticleCardProps {
   article: Article;
@@ -27,6 +28,21 @@ export function ArticleCard({ article }: ArticleCardProps) {
                 year: 'numeric'
               })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
             </p>
+            {article.tags && article.tags.map((tag, index) => {
+              const colors = getTagColor(tag);
+              return (
+                <Badge 
+                  key={index} 
+                  className="text-xs border-0"
+                  style={{ 
+                    backgroundColor: colors.bg, 
+                    color: colors.text 
+                  }}
+                >
+                  {tag}
+                </Badge>
+              );
+            })}
             {article.badges && article.badges.map((badge, index) => (
               <Badge key={index} className={`${badge.color} text-white border-0`}>
                 {badge.text}

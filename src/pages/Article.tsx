@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 import footerDark from "@/assets/footer-dark.svg";
 import footerLight from "@/assets/footer-light.svg";
+import { getTagColor } from "@/lib/utils";
 
 export default function Article() {
   const { id } = useParams<{ id: string }>();
@@ -61,6 +62,21 @@ export default function Article() {
                     })} • <span style={{ color: '#1b96c0' }}>{article.author}</span>
                   </span>
                 </div>
+                {article.tags && article.tags.map((tag, index) => {
+                  const colors = getTagColor(tag);
+                  return (
+                    <Badge 
+                      key={index} 
+                      className="text-xs border-0"
+                      style={{ 
+                        backgroundColor: colors.bg, 
+                        color: colors.text 
+                      }}
+                    >
+                      {tag}
+                    </Badge>
+                  );
+                })}
                 {article.badges && article.badges.map((badge, index) => (
                   <Badge key={index} className={`${badge.color} text-white border-0`}>
                     {badge.text}
@@ -94,7 +110,7 @@ export default function Article() {
                 switch (block.type) {
                   case 'paragraph':
                     return (
-                      <p key={index} className="text-foreground leading-snug tracking-normal font-normal-text font-medium">
+                      <p key={index} className="leading-snug tracking-normal font-normal-text font-medium">
                         {block.content}
                       </p>
                     );

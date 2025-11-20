@@ -196,6 +196,10 @@ All colors MUST be HSL.
     font-weight: 500;
   }
 
+  .dark p {
+    color: #8D8D8D;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Title', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     @apply font-bold tracking-tight;
@@ -225,6 +229,10 @@ All colors MUST be HSL.
 
   .article-content p {
     @apply mb-4 leading-relaxed;
+  }
+
+  .dark .article-content p {
+    color: #8D8D8D;
   }
 
   .article-content ul, .article-content ol {
