@@ -31,6 +31,40 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+
+// Add this to your articles.ts file:
+
+{
+  "id": "student-council",
+  "title": "Student council",
+  "excerpt": "Wow what a nice article!",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Student_Union_building_at_Portola_High_School_in_Irvine.jpg",
+  "author": "Nuha Siddiqui",
+  "date": "2026-05-09",
+  "readTime": "2 min read",
+  "tags": [
+    "Student Council",
+    "test1",
+    "test2"
+  ],
+  "content": [
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "heading 1 - change 1"
+    },
+    {
+      "type": "paragraph",
+      "content": "This is our paragraph!"
+    },
+    {
+      "type": "image",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Aniversario_IRFE_2013_IMG_0688_%2810231176534%29.jpg",
+      "alt": "Student council",
+      "caption": "Example caption!"
+    }
+  ]
+},
   
 // Add this to your articles.ts file:
 
